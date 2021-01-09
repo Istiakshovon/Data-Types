@@ -9,6 +9,7 @@ int main(int argc, char** argv) {
 //    %d for integer
 //    %f for float
 //    %c for char
+//    %p for pointer
     
     int two = 2,three = 3, six = 6;
     int result = (two+three)*six/two;
@@ -40,6 +41,17 @@ int main(int argc, char** argv) {
     printf("Enter your name : ");
     fgets(name1, 20, stdin);
     printf("%s",name1);
+    
+    //memory
+    int age2 = 30;
+    int * pAge2 = &age2;
+    //output will be in hexa decimal
+    printf("%p", &age2);
+    //To output main value or hexa decimal to int
+    printf("%d", *pAge2);
+    //we can try it also
+    printf("%d", *&age2);
+    
     
     return (EXIT_SUCCESS);
 }
